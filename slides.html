@@ -431,7 +431,7 @@
 <section>
 <section id="let-take-a-look-at-story-time" class="title-slide slide level1 center">
 <h1>Let’ take a look at stoRy time</h1>
-<p><a href="https://umair.shinyapps.io/storytimegcp/" data-preview-link="true">App Link</a></p>
+<p><a href="https://storytime-209667139353.us-central1.run.app/" data-preview-link="true">App Link</a></p>
 
 <img data-src="assets/images/qr-code.png" class="r-stretch"></section>
 <section id="section-1" class="slide level2">
@@ -643,6 +643,7 @@ User
 <span id="cb5-9"><a href=""></a><span class="co"># All images</span></span>
 <span id="cb5-10"><a href=""></a>new_all_imgs <span class="ot">&lt;-</span> <span class="fu">lapply</span>(resps, get_image)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment fade-up">
 <div>
 
 </div>
@@ -659,25 +660,43 @@ User
 </div>
 </div>
 </div>
+</div>
 </section></section>
 <section>
 <section id="step-3-creating-slides" class="title-slide slide level1 center" data-background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXFzcXp4cnF6dHFzZWlzdnoxdThrdnQ4dW1vNmZ3NGplNW1leWQyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YGbwOKH0N9VoCqAgrx/giphy.gif">
 <h1>Step 3: Creating Slides</h1>
 
 </section>
+<section id="publishing-system-2" class="slide level2 centered" data-menu-title="Publishing system 2" data-background-color="#0F1620" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"></h2>
+<div style="margin-top: 50px; font-size: 2em; color: #75AADB">
+<p>Quarto is a new, open-source,<br> scientific and technical<br> publishing system</p>
+</div>
+<div class="fragment fade-up">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/images/horst_quarto_schematic.png" class="quarto-figure quarto-figure-center" alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto." width="1100"></p>
+</figure>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://mine.quarto.pub/hello-quarto/#/publishing-system-2">Source</a></p>
+</div>
+</section>
 <section id="quarto" class="slide level2">
 <h2>Quarto</h2>
 <blockquote>
 <p>An open-source scientific and technical publishing system</p>
 </blockquote>
+<p><a href="https://quarto.org/docs/gallery/" data-preview-link="true">Quarto Gallery</a></p>
 
 <img data-src="assets/images/quarto.png" class="r-stretch"><p>I used parameters in the quarto file and the <code>quarto</code> R package.</p>
 </section>
-<section id="quarto-file" class="slide level2">
-<h2>Quarto file</h2>
-<p>YAML options:</p>
+<section id="quarto-file-.qmd" class="slide level2">
+<h2>Quarto file (.qmd)</h2>
+<p>YAML options (instructions):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="sc">---</span></span>
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="1|2-3|4-9|10-13|14|16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="sc">---</span></span>
 <span id="cb6-2"><a href=""></a>title<span class="sc">:</span> <span class="st">"stoRy time with shiny and quarto"</span></span>
 <span id="cb6-3"><a href=""></a>author<span class="sc">:</span> <span class="st">"A story written by you &amp; AI"</span></span>
 <span id="cb6-4"><a href=""></a>format<span class="sc">:</span> </span>
@@ -690,13 +709,15 @@ User
 <span id="cb6-11"><a href=""></a>  story_prompt<span class="sc">:</span> <span class="st">""</span></span>
 <span id="cb6-12"><a href=""></a>  story<span class="sc">:</span> <span class="st">""</span></span>
 <span id="cb6-13"><a href=""></a>  imgs<span class="sc">:</span> <span class="st">""</span></span>
-<span id="cb6-14"><a href=""></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-14"><a href=""></a><span class="sc">---</span></span>
+<span id="cb6-15"><a href=""></a>    </span>
+<span id="cb6-16"><a href=""></a><span class="st">"&lt;Use story and images here for creating slides&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="quarto-package" class="slide level2">
-<h2>quarto package</h2>
+<section id="quarto-r-package" class="slide level2">
+<h2>quarto R package</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(</span>
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="1|2|3|4-11|14|16-19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a>quarto<span class="sc">::</span><span class="fu">quarto_render</span>(</span>
 <span id="cb7-2"><a href=""></a>  <span class="at">input =</span> <span class="st">"&lt;QUARTO FILE&gt;"</span>,</span>
 <span id="cb7-3"><a href=""></a>  <span class="at">output_format =</span> <span class="st">"all"</span>,</span>
 <span id="cb7-4"><a href=""></a>  <span class="at">metadata =</span> <span class="fu">list</span>(</span>
@@ -718,22 +739,32 @@ User
 <span id="cb7-20"><a href=""></a>  )</span>
 <span id="cb7-21"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><a href="https://quarto.org/docs/presentations/revealjs/themes.html" data-preview-link="true">Reveal Themes</a></p>
 </section></section>
 <section>
-<section id="step-4-create-a-web-app" class="title-slide slide level1 center">
+<section id="step-4-create-a-web-app" class="title-slide slide level1 center" data-background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXYxeHVnYnVmYmFkZDRjYnV6M2oxM3RjZmhhb3ZhY3gwamY2eHlyZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c2o8GmMCbY4c7HtiQe/giphy.gif">
 <h1>Step 4: Create a web app</h1>
 
 </section>
 <section id="shiny-web-application" class="slide level2">
 <h2>Shiny web application</h2>
+<p><a href="https://shiny.posit.co/" data-preview-link="true">Make web apps with shiny</a></p>
 
 <img data-src="assets/images/shiny.png" class="r-stretch"></section>
+<section id="shiny-playground" class="slide level2">
+<h2>Shiny playground</h2>
+<p><a href="https://shinylive.io/r/examples/" data-preview-link="true">shinylive</a></p>
+</section>
 <section id="shiny-web-application-1" class="slide level2">
 <h2>Shiny web application</h2>
-<p><img data-src="assets/images/shiny_anatomy.png"> ::: footer Source: <a href="https://hosting.analythium.io/the-anatomy-of-a-shiny-application/">The Anatomy of a Shiny Application</a> :::</p>
+<p><a href="https://storytime-209667139353.us-central1.run.app/" data-preview-link="true">App Link</a></p>
+
+<img data-src="assets/images/shiny_anatomy.png" class="r-stretch"><div class="footer">
+<p>Source: <a href="https://hosting.analythium.io/the-anatomy-of-a-shiny-application/">The Anatomy of a Shiny Application</a></p>
+</div>
 </section></section>
 <section>
-<section id="step-5-deploy-the-application" class="title-slide slide level1 center">
+<section id="step-5-deploy-the-application" class="title-slide slide level1 center" data-background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDMyaGllaXhwbGpzcDRhZjgwOXBsemtpN2J2czVzMWFrMGk3NmFjNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QsyCWMcTm9WZ8zGqWr/giphy.gif">
 <h1>Step 5: Deploy the application</h1>
 
 </section>
@@ -741,15 +772,79 @@ User
 <h2>Google Cloud Run</h2>
 
 <img data-src="assets/images/gcr.png" class="r-stretch"></section>
+<section id="docker-containers" class="slide level2">
+<h2>Docker Containers</h2>
+<blockquote>
+<p>“It runs on my computer”</p>
+</blockquote>
+<div class="columns">
+<div class="column" style="width:50%;">
+<blockquote>
+<p>A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another.</p>
+</blockquote>
+</div><div class="column" style="width:50%;">
+<p><img data-src="assets/images/containers.png"></p>
+</div><div class="footer">
+<p><a href="https://www.docker.com/resources/what-container/">Source</a></p>
+</div>
+</div>
+</section>
+<section id="dockerfile" class="slide level2">
+<h2>Dockerfile</h2>
+
+<img data-src="assets/images/containers2.webp" class="r-stretch"><p>For an example shiny app:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="1-2|4-5|7-8|10-11|13-14|16-17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a><span class="co"># Base R Shiny image</span></span>
+<span id="cb8-2"><a href=""></a>FROM rocker<span class="sc">/</span>shiny</span>
+<span id="cb8-3"><a href=""></a></span>
+<span id="cb8-4"><a href=""></a><span class="co"># Make a directory in the container</span></span>
+<span id="cb8-5"><a href=""></a>RUN mkdir <span class="sc">/</span>home<span class="sc">/</span>shiny<span class="sc">-</span>app</span>
+<span id="cb8-6"><a href=""></a></span>
+<span id="cb8-7"><a href=""></a><span class="co"># Install R dependencies</span></span>
+<span id="cb8-8"><a href=""></a>RUN R <span class="sc">-</span>e <span class="st">"install.packages(c('dplyr', 'ggplot2', 'gapminder'))"</span></span>
+<span id="cb8-9"><a href=""></a></span>
+<span id="cb8-10"><a href=""></a><span class="co"># Copy the Shiny app code</span></span>
+<span id="cb8-11"><a href=""></a>COPY app.R <span class="sc">/</span>home<span class="sc">/</span>shiny<span class="sc">-</span>app<span class="sc">/</span>app.R</span>
+<span id="cb8-12"><a href=""></a></span>
+<span id="cb8-13"><a href=""></a><span class="co"># Expose the application port</span></span>
+<span id="cb8-14"><a href=""></a>EXPOSE <span class="dv">8180</span></span>
+<span id="cb8-15"><a href=""></a></span>
+<span id="cb8-16"><a href=""></a><span class="co"># Run the R Shiny app</span></span>
+<span id="cb8-17"><a href=""></a>CMD Rscript <span class="sc">/</span>home<span class="sc">/</span>shiny<span class="sc">-</span>app<span class="sc">/</span>app.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="footer">
+<p><a href="https://www.appsilon.com/post/r-shiny-docker-getting-started">How To Run Shiny Apps in a Docker Container;</a> <a href="https://nilesh93.medium.com/practical-guide-on-writing-a-dockerfile-for-your-application-89376f88b3b5">Image source</a></p>
+</div>
+</section>
+<section id="push-to-github" class="slide level2">
+<h2>Push to GitHub</h2>
+<p><a href="https://github.com/durraniu/stoRytimegcp" data-preview-link="true">GitHub Repo for stoRytime</a></p>
+<p><a href="https://storytime-209667139353.us-central1.run.app/" data-preview-link="true">App Link</a></p>
+</section>
 <section id="google-cloud-run-deployment" class="slide level2">
 <h2>Google Cloud Run deployment</h2>
 
-<img data-src="assets/images/gcr_workflow.gif" class="r-stretch"><div class="quarto-auto-generated-content">
+<img data-src="assets/images/gcr_workflow.gif" class="r-stretch"></section></section>
+<section id="step-6-celebrate" class="title-slide slide level1 center">
+<h1>Step 6: Celebrate 🎉</h1>
+
+<img data-src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGtpenpoNHNlYWl2OHN6bWo0a2RiZHJvYm95dWtvYWtlNWF6YWs2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9ODU1JuESgER602OgO/giphy.gif" class="r-stretch"></section>
+
+<section id="questions-and-contact" class="title-slide slide level1 center">
+<h1>Questions and Contact</h1>
+<ul>
+<li>umairdurrani.com<br>
+</li>
+<li><span class="citation" data-cites="transport-talk.bsky.social">@transport-talk.bsky.social</span></li>
+</ul>
+<p>Try the app</p>
+
+<img data-src="assets/images/qr-code.png" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
