@@ -389,32 +389,56 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">stoRy time with Shiny, Quarto, and Google Cloud Run</h1>
-  <p class="subtitle">Write and Illustrate Stories with AI</p>
 
-<div class="quarto-title-authors">
-</div>
+<section id="section" class="slide level2" data-background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3A2cTRwdWt5aDZ3ZjRnZDR6YzM0azV6YWJ3dzNmZmp3NWx0cnc5YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0aPoPGSV1gTGgTmblM/giphy.gif">
+<h2></h2>
+<p><span class="custom-title">stoRy time with Shiny, Quarto, and Google Cloud Run</span></p>
+<p><span class="custom-subtitle">Write and Illustrate Stories with AI</span></p>
+<p><span class="custom-author">Umair Durrani</span></p>
+<p><span class="custom-url"><a href="https://mine.quarto.pub/hello-quarto/">mine.quarto.pub/hello-quarto</a></span></p>
+</section>
+<section>
+<section id="everyone-enjoys-stories" class="title-slide slide level1 center">
+<h1>Everyone enjoys stories</h1>
 
 </section>
-<section id="what-is-it" class="slide level2">
-<h2>What is it?</h2>
+<section id="ai-is-great-at-making-up-stuff" class="slide level2">
+<h2>AI is great at <em>making up stuff</em></h2>
+
+<img data-src="assets/images/gpt.webp" class="r-stretch"><div class="footer">
+<p><a href="https://customgpt.ai/hallucinations/">Source 1;</a> <a href="https://towardsdatascience.com/chatgpt-insists-i-am-dead-and-the-problem-with-language-models-db5a36c22f11">Source 2</a></p>
+</div>
+</section></section>
+<section>
+<section id="ai-is-great-at-making-up-stuff-creating-stories" class="title-slide slide level1 center">
+<h1>AI is great at <s><em>making up stuff</em></s> creating stories 🙂</h1>
+
+</section>
+<section id="what-is-story-time" class="slide level2">
+<h2>What is stoRy time?</h2>
 <p>A web application that:</p>
 <ul>
 <li>takes the first sentence of a story you want to write<br>
 </li>
 <li>uses generative AI models to create a full story with images</li>
 </ul>
-</section>
+</section></section>
+<section id="why-r-in-story-time" class="title-slide slide level1 center">
+<h1>Why R in stoRy time?</h1>
+
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" class="r-stretch"></section>
+
 <section>
-<section id="let-take-a-look" class="title-slide slide level1 center">
-<h1>Let’ take a look</h1>
-<p><a href="https://umair.shinyapps.io/storytimegcp/" data-preview-link="true">Link to app</a></p>
-</section>
-<section id="section" class="slide level2" data-background-image="assets/images/app_main.png">
-<h2></h2>
-</section>
+<section id="let-take-a-look-at-story-time" class="title-slide slide level1 center">
+<h1>Let’ take a look at stoRy time</h1>
+<p><a href="https://umair.shinyapps.io/storytimegcp/" data-preview-link="true">App Link</a></p>
+
+<img data-src="assets/images/qr-code.png" class="r-stretch"></section>
 <section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="assets/images/app_main.png" class="r-stretch"></section>
+<section id="section-2" class="slide level2">
 <h2></h2>
 
 <img data-src="assets/images/app_workflow.gif" class="r-stretch"></section>
@@ -453,36 +477,30 @@ User
 </h4>
 </div></div>
 </section>
-<section id="why-this-project" class="slide level2">
-<h2>Why this project?</h2>
-
-<img data-src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWszcm9kaTJqb2ZnbGJjanpxc3JrdG51Z3pwYXk2Mzd0dTZ2bW9jMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/457NTDOuMmDfO/giphy.gif" class="r-stretch"></section>
-<section id="why-this-project-1" class="slide level2">
-<h2>Why this project?</h2>
+<section id="how-does-story-time-work-and-why-you-should-care" class="slide level2">
+<h2>How does stoRy time work? and why you should care?</h2>
 <ul>
-<li><p>Generative AI is great at making stuff up<br>
-</p></li>
-<li><p>You learn a lot of useful stuff:</p>
+<li><p>You learn a lot of useful stuff working on such project:</p>
 <ul>
-<li>Making API requests<br>
+<li>Making REST API requests<br>
 </li>
 <li>Develop web applications<br>
 </li>
-<li>Create parameterized documents</li>
+<li>Create parameterized documents<br>
+</li>
+<li>Working with Cloud</li>
 </ul></li>
 </ul>
 </section></section>
 <section>
-<section id="step-1-create-story-text" class="title-slide slide level1 center">
+<section id="step-1-create-story-text" class="title-slide slide level1 center" data-background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTZtYjBmOHN4Y2swMWtwbGIybTQ5dnRnczk1bzJ0MzQ4czE4YjUzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/61fyqLCQTlo3pgSuaW/giphy.gif">
 <h1>Step 1: Create story text</h1>
 
 </section>
 <section id="how-to-generate-a-story-with-ai" class="slide level2">
 <h2>How to generate a story with AI?</h2>
-<p>Several text generation models exist. I used <code>llama-3.1-8b-instruct</code> from <a href="https://developers.cloudflare.com/workers-ai/models/">Cloudflare Workers AI Models API</a>.</p>
-<ul>
-<li>Free for all models in beta!</li>
-</ul>
+<p>Several text generation models exist.</p>
+<p>I used <code>llama-3.1-8b-instruct</code> from <a href="https://developers.cloudflare.com/workers-ai/models/">Cloudflare Workers AI Models API</a>.</p>
 
 <img data-src="assets/images/cloudflare_models.png" class="r-stretch"></section>
 <section id="whats-an-api" class="slide level2">
@@ -490,6 +508,10 @@ User
 <blockquote>
 <p>An API is a programmatic way to interact with a webservice that allows us to automate the retrieval of data.</p>
 </blockquote>
+<ul>
+<li>GET</li>
+<li>POST</li>
+</ul>
 <p>I used the <code>httr2</code> R package to make HTTP requests to Cloudflare Workers AI Models endpoint</p>
 <div class="footer">
 <p>Source: <a href="https://laderast.github.io/intro_apis_json_cascadia/#/what-are-apis">Talk by Ted Laderas</a></p>
@@ -569,43 +591,42 @@ User
 </div>
 </section></section>
 <section>
-<section id="step-2-create-images-for-illustration" class="title-slide slide level1 center">
+<section id="step-2-create-images-for-illustration" class="title-slide slide level1 center" data-background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXY1czBjYXk3YTcyMmIzb3Yyenlja2Z4Mzd1eGFoaXRybDliMDE0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ciMaPs0ocJCM5vzjvh/giphy.gif">
 <h1>Step 2: Create images for illustration</h1>
 
 </section>
 <section id="use-stable-diffusion-to-generate-images" class="slide level2">
 <h2>Use Stable Diffusion to generate images</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1:5|7|9-18|21-29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="co"># Function to request a single image</span></span>
-<span id="cb4-2"><a href=""></a>req_single_image <span class="ot">&lt;-</span> <span class="cf">function</span>(prompt,</span>
-<span id="cb4-3"><a href=""></a>                             instructions,</span>
-<span id="cb4-4"><a href=""></a>                             <span class="at">ACCOUNT_ID =</span> <span class="fu">Sys.getenv</span>(<span class="st">"ACCOUNT_ID"</span>),</span>
-<span id="cb4-5"><a href=""></a>                             <span class="at">API_KEY =</span> <span class="fu">Sys.getenv</span>(<span class="st">"API_KEY"</span>),</span>
-<span id="cb4-6"><a href=""></a>                             <span class="at">base_url =</span> <span class="fu">cf_base_url</span>()){</span>
-<span id="cb4-7"><a href=""></a></span>
-<span id="cb4-8"><a href=""></a>  url_img <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://api.cloudflare.com/client/v4/accounts/"</span>, ACCOUNT_ID, <span class="st">"/ai/run/@cf/bytedance/stable-diffusion-xl-lightning"</span>)</span>
-<span id="cb4-9"><a href=""></a></span>
-<span id="cb4-10"><a href=""></a>  <span class="co"># Create the request</span></span>
-<span id="cb4-11"><a href=""></a>  httr2<span class="sc">::</span><span class="fu">request</span>(url_img) <span class="sc">|&gt;</span></span>
-<span id="cb4-12"><a href=""></a>    httr2<span class="sc">::</span><span class="fu">req_headers</span>(</span>
-<span id="cb4-13"><a href=""></a>      <span class="st">"Authorization"</span> <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"Bearer"</span>, API_KEY)</span>
-<span id="cb4-14"><a href=""></a>    ) <span class="sc">|&gt;</span></span>
-<span id="cb4-15"><a href=""></a>    httr2<span class="sc">::</span><span class="fu">req_body_json</span>(<span class="fu">list</span>(<span class="at">prompt =</span> <span class="fu">paste0</span>(</span>
-<span id="cb4-16"><a href=""></a>      prompt, <span class="st">" "</span>,</span>
-<span id="cb4-17"><a href=""></a>      instructions</span>
-<span id="cb4-18"><a href=""></a>    ))) <span class="sc">|&gt;</span></span>
-<span id="cb4-19"><a href=""></a>    httr2<span class="sc">::</span><span class="fu">req_method</span>(<span class="st">"POST"</span>)</span>
-<span id="cb4-20"><a href=""></a>}</span>
-<span id="cb4-21"><a href=""></a></span>
-<span id="cb4-22"><a href=""></a><span class="co"># Get image if request is successful</span></span>
-<span id="cb4-23"><a href=""></a>get_image <span class="ot">&lt;-</span> <span class="cf">function</span>(response){</span>
-<span id="cb4-24"><a href=""></a>  <span class="cf">if</span> (response<span class="sc">$</span>status_code <span class="sc">==</span> <span class="dv">200</span>){</span>
-<span id="cb4-25"><a href=""></a>    png_img <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">resp_body_raw</span>(response)</span>
-<span id="cb4-26"><a href=""></a>  } <span class="cf">else</span>{</span>
-<span id="cb4-27"><a href=""></a>    png_img <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb4-28"><a href=""></a>  }</span>
-<span id="cb4-29"><a href=""></a>  png_img</span>
-<span id="cb4-30"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1-5|7|10-13|14-17|18-19|21-29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>req_single_image <span class="ot">&lt;-</span> <span class="cf">function</span>(prompt,</span>
+<span id="cb4-2"><a href=""></a>                             instructions,</span>
+<span id="cb4-3"><a href=""></a>                             <span class="at">ACCOUNT_ID =</span> <span class="fu">Sys.getenv</span>(<span class="st">"ACCOUNT_ID"</span>),</span>
+<span id="cb4-4"><a href=""></a>                             <span class="at">API_KEY =</span> <span class="fu">Sys.getenv</span>(<span class="st">"API_KEY"</span>),</span>
+<span id="cb4-5"><a href=""></a>                             <span class="at">base_url =</span> <span class="fu">cf_base_url</span>()){</span>
+<span id="cb4-6"><a href=""></a></span>
+<span id="cb4-7"><a href=""></a>  url_img <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://api.cloudflare.com/client/v4/accounts/"</span>, ACCOUNT_ID, <span class="st">"/ai/run/@cf/bytedance/stable-diffusion-xl-lightning"</span>)</span>
+<span id="cb4-8"><a href=""></a></span>
+<span id="cb4-9"><a href=""></a>  <span class="co"># Create the request</span></span>
+<span id="cb4-10"><a href=""></a>  httr2<span class="sc">::</span><span class="fu">request</span>(url_img) <span class="sc">|&gt;</span></span>
+<span id="cb4-11"><a href=""></a>    httr2<span class="sc">::</span><span class="fu">req_headers</span>(</span>
+<span id="cb4-12"><a href=""></a>      <span class="st">"Authorization"</span> <span class="ot">=</span> <span class="fu">paste</span>(<span class="st">"Bearer"</span>, API_KEY)</span>
+<span id="cb4-13"><a href=""></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb4-14"><a href=""></a>    httr2<span class="sc">::</span><span class="fu">req_body_json</span>(<span class="fu">list</span>(<span class="at">prompt =</span> <span class="fu">paste0</span>(</span>
+<span id="cb4-15"><a href=""></a>      prompt, <span class="st">" "</span>,</span>
+<span id="cb4-16"><a href=""></a>      instructions</span>
+<span id="cb4-17"><a href=""></a>    ))) <span class="sc">|&gt;</span></span>
+<span id="cb4-18"><a href=""></a>    httr2<span class="sc">::</span><span class="fu">req_method</span>(<span class="st">"POST"</span>)</span>
+<span id="cb4-19"><a href=""></a>}</span>
+<span id="cb4-20"><a href=""></a></span>
+<span id="cb4-21"><a href=""></a><span class="co"># Get image if request is successful</span></span>
+<span id="cb4-22"><a href=""></a>get_image <span class="ot">&lt;-</span> <span class="cf">function</span>(response){</span>
+<span id="cb4-23"><a href=""></a>  <span class="cf">if</span> (response<span class="sc">$</span>status_code <span class="sc">==</span> <span class="dv">200</span>){</span>
+<span id="cb4-24"><a href=""></a>    png_img <span class="ot">&lt;-</span> httr2<span class="sc">::</span><span class="fu">resp_body_raw</span>(response)</span>
+<span id="cb4-25"><a href=""></a>  } <span class="cf">else</span>{</span>
+<span id="cb4-26"><a href=""></a>    png_img <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb4-27"><a href=""></a>  }</span>
+<span id="cb4-28"><a href=""></a>  png_img</span>
+<span id="cb4-29"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="generate-some-images" class="slide level2">
@@ -640,7 +661,7 @@ User
 </div>
 </section></section>
 <section>
-<section id="step-3-creating-slides" class="title-slide slide level1 center">
+<section id="step-3-creating-slides" class="title-slide slide level1 center" data-background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXFzcXp4cnF6dHFzZWlzdnoxdThrdnQ4dW1vNmZ3NGplNW1leWQyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YGbwOKH0N9VoCqAgrx/giphy.gif">
 <h1>Step 3: Creating Slides</h1>
 
 </section>
@@ -905,9 +926,9 @@ User
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

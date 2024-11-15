@@ -1,28 +1,62 @@
 ---
-title: "stoRy time with Shiny, Quarto, and Google Cloud Run"
-subtitle: "Write and Illustrate Stories with AI"
+pagetitle: "stoRy time with Shiny, Quarto, and Google Cloud Run"
 format: 
   revealjs:
     transition: "fade"
     backgroundTransition: "fade"
+    height: 900
+    width: 1600
     highlight-style: oblivion
     theme: [night, assets/scss/custom.scss]
 ---
 
+##  {background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3A2cTRwdWt5aDZ3ZjRnZDR6YzM0azV6YWJ3dzNmZmp3NWx0cnc5YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0aPoPGSV1gTGgTmblM/giphy.gif"}
+
+[stoRy time with Shiny, Quarto, and Google Cloud Run]{.custom-title}
+
+[Write and Illustrate Stories with AI]{.custom-subtitle}
+
+[Umair Durrani]{.custom-author}
+
+[[mine.quarto.pub/hello-quarto](https://mine.quarto.pub/hello-quarto/)]{.custom-url}
 
 
-## What is it?
+# Everyone enjoys stories
+
+
+## AI is great at *making up stuff*
+
+![](assets/images/gpt.webp)
+
+::: footer
+[Source 1;](https://customgpt.ai/hallucinations/) [Source 2](https://towardsdatascience.com/chatgpt-insists-i-am-dead-and-the-problem-with-language-models-db5a36c22f11)
+:::
+
+# AI is great at <s>*making up stuff*</s> creating stories 🙂
+
+
+## What is stoRy time?
+
 
 A web application that:  
 
 * takes the first sentence of a story you want to write  
 * uses generative AI models to create a full story with images  
 
-# Let' take a look
 
-[Link to app](https://umair.shinyapps.io/storytimegcp/)
+# Why R in stoRy time?
 
-##  {background-image="assets/images/app_main.png"}
+![](https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg)
+
+# Let' take a look at stoRy time
+
+[App Link](https://umair.shinyapps.io/storytimegcp/){preview-link="true"}
+
+![](assets/images/qr-code.png)
+
+##
+
+![](assets/images/app_main.png)
 
 ##
 
@@ -67,30 +101,23 @@ A web application that:
 :::
 
 
+## How does stoRy time work? and why you should care?
 
+* You learn a lot of useful stuff working on such project:  
 
-## Why this project?
-
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWszcm9kaTJqb2ZnbGJjanpxc3JrdG51Z3pwYXk2Mzd0dTZ2bW9jMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/457NTDOuMmDfO/giphy.gif)
-
-
-## Why this project?
-
-* Generative AI is great at making stuff up  
-* You learn a lot of useful stuff:  
-
-  - Making API requests    
+  - Making REST API requests    
   - Develop web applications  
   - Create parameterized documents  
+  - Working with Cloud
   
   
-# Step 1: Create story text
+# Step 1: Create story text {background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTZtYjBmOHN4Y2swMWtwbGIybTQ5dnRnczk1bzJ0MzQ4czE4YjUzZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/61fyqLCQTlo3pgSuaW/giphy.gif"}
 
 ## How to generate a story with AI?
 
-Several text generation models exist. I used `llama-3.1-8b-instruct` from [Cloudflare Workers AI Models API](https://developers.cloudflare.com/workers-ai/models/).
+Several text generation models exist.   
 
-* Free for all models in beta!
+I used `llama-3.1-8b-instruct` from [Cloudflare Workers AI Models API](https://developers.cloudflare.com/workers-ai/models/).
 
 ![](assets/images/cloudflare_models.png)
 
@@ -98,6 +125,9 @@ Several text generation models exist. I used `llama-3.1-8b-instruct` from [Cloud
 ## What's an API?  
 
 > An API is a programmatic way to interact with a webservice that allows us to automate the retrieval of data.
+
+- GET
+- POST
 
 I used the `httr2` R package to make HTTP requests to Cloudflare Workers AI Models endpoint
 
@@ -190,15 +220,14 @@ Generates:
 ```
 
 
-# Step 2: Create images for illustration
+# Step 2: Create images for illustration {background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXY1czBjYXk3YTcyMmIzb3Yyenlja2Z4Mzd1eGFoaXRybDliMDE0MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ciMaPs0ocJCM5vzjvh/giphy.gif"}
 
 ## Use Stable Diffusion to generate images
 
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "1:5|7|9-18|21-29"
-# Function to request a single image
+#| code-line-numbers: "1-5|7|10-13|14-17|18-19|21-29"
 req_single_image <- function(prompt,
                              instructions,
                              ACCOUNT_ID = Sys.getenv("ACCOUNT_ID"),
@@ -228,7 +257,6 @@ get_image <- function(response){
   }
   png_img
 }
-
 ```
 
 ## Generate some images
@@ -259,7 +287,7 @@ new_all_imgs <- lapply(resps, get_image)
 ::: 
 
 
-# Step 3: Creating Slides 
+# Step 3: Creating Slides {background-image="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXFzcXp4cnF6dHFzZWlzdnoxdThrdnQ4dW1vNmZ3NGplNW1leWQyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YGbwOKH0N9VoCqAgrx/giphy.gif"}
 
 ## Quarto 
 
