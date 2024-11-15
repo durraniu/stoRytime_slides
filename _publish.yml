@@ -1,0 +1,4 @@
+- source: slides.qmd
+  quarto-pub:
+    - id: 7d888203-acf8-47ba-96e1-dc0efe1db7fa
+      url: 'https://dru.quarto.pub/slides-3f3c'

@@ -18,7 +18,7 @@ format:
 
 [Umair Durrani]{.custom-author}
 
-[[mine.quarto.pub/hello-quarto](https://mine.quarto.pub/hello-quarto/)]{.custom-url}
+[[https://dru.quarto.pub/slides-3f3c/](https://dru.quarto.pub/slides-3f3c/)]{.custom-url}
 
 
 # Everyone enjoys stories
